@@ -174,7 +174,7 @@ func modifyResponse(res *http.Response) error {
 				csp = strings.Replace(csp, "'self'", "'self' "+origin, -1)
 				// icons use wrong protocol
 				if res.Request.Header.Get("X-Forwarded-Proto") != "https" {
-					csp = strings.Replace(csp, "https://*.discordapp.com", "*.discordapp.com", -1)
+					csp = strings.Replace(csp, "https://*.discord.com", "*.discord.com", -1)
 					csp = strings.Replace(csp, "wss://*.discord.media", "ws://*.discord.media", -1)
 				}
 				v[i] = csp
