@@ -144,7 +144,7 @@ func modifyResponse(res *http.Response) error {
 	} else {
 		iHead += iMeta
 		iScript += iHead
-		origin := "https://disports.herokuapp.com"
+		origin := "https://" + res.Request.URL.Host
 		r, w := io.Pipe()
 		go func() {
 			data := struct {
