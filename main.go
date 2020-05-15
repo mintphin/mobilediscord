@@ -74,7 +74,7 @@ func getOrigin(req *http.Request) string {
 	} else if strings.HasPrefix(req.Host, "ptb") {
 		return "ptb.discord.com"
 	} else {
-		return "discordapp.com"
+		return "discord.com"
 	}
 }
 
